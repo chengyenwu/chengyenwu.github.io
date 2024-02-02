@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Hallstatt & Obertraun travel log</title>
+  </head>
+  <body style="background-color:#dee2e6">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html">CY's Life</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Battery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Travel</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Class
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Study note</a></li>
+                  <li><a class="dropdown-item" href="#">Leetcode</a></li>
+                  <li><a class="dropdown-item" href="#">Data analysis</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <div class="banner">
+        <img src="backgroundpic.jpg" class="w-100">
+    </div>
+
+    <div class="container-fluid mt-3" >
+      <div class="row"> 
+        <div class="col-12 col-md-3" >
+          <div class="col">
+            <div class="card">
+              <img src="selfprofilepic.jpg" class="card-img-top rounded-circle" alt="self picture of CY">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size:25px;font-weight:bold;">CY Wu</h5>
+                  <p class="card-text" style="font-size:18px;">This is me who never ever stop learning.</p>
+                    <div class="row">
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="http://www.linkedin.com/in/samwucy" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="https://github.com/chengyenwu" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+            
+        
+            
+        <div class="col-12 col-md-9" >
+          <div class="col">
+            <div class="card">
+              <div class="card-body" >
+                <h2 class="card-title" >Travel log</h2>
+                <h4 class="card-subtitle mt-3">Hallstatt & Obertraun in Austria</h4>
+                <p class="mt-4" style="font-size:18px;">哈修塔特(Hallstatt)和上特勞恩(Obertraun)位在奧地利中部，是一個非常漂亮的小鎮，在這次旅程中我們從薩爾斯堡(Salzburg)過來，交通方式:<br><b>Salzburg hbf搭150號巴士 -> Bad Ischl Bahnhof(Busterminal)站轉乘542號巴士 -> Hallstatt Gosaumühle站轉乘543號巴士 -> Hallstatt Lahn站下車。</b></p>
+                <img src="hallstatt & obertraun google map.png" class="mt-2" style="display:block; margin:auto; height: 500px" alt="hallstatt & obertraun google map">
+                <p class="mt-3" style="font-size:18px;">下車之後馬上就能看到Lahn的牌子，湖景非常漂亮，但是近年來此地隨著部落客分享後，旅行團來的數量有隨之增加。我在這裡待2天看到的團幾乎都是韓國與中國旅行團，有時會被中國遊客的大聲音量驚嚇到。</p>
+                <div class="card mb-3">
+                  <img src="hallstatt & obertraun/IMG_0826.jpg" class="card-img-top" style="display:block; margin:auto">
+                  <div class="card-body">
+                    <h5 class="card-title">Hallstatt Lahn bus station</h5>
+                    <p class="card-text">中間的湖是哈修塔特胡，一年四季都有不同韻味，10月去時白天氣溫約22-24度，晚上16-17度，氣溫很舒適。哈修塔特的著名景點是搭纜車去鹽礦區 與 坐公車到obertraun再搭纜車前往五指山、冰洞等景點。</p>
+                  </div>
+                </div>
+                <div class="card mb-3">
+                  <img src="hallstatt & obertraun/IMG_6817.jpg" class="card-img-top" style="display:block; margin:auto">
+                  <img src="hallstatt & obertraun/IMG_6533.jpg" class="card-img-top mt-2" style="display:block; margin:auto">
+                  <div class="card-body">
+                    <p class="card-text">兩天早上的哈修塔特湖呈現不同的樣貌，一天清晨為陰天可以看到完整的雲，另一天早晨就出太陽，湖景跟對面的山清晰可見，見到兩天哈修塔特湖不同的樣貌後，就能體會為什麼這邊列在奧地利旅遊清單中。</p>
+                  </div>
+                </div>
+                <div class="card mb-3">
+                  <img src="hallstatt & obertraun/IMG_0821.JPG" class="card-img-top" style="display:block; margin:auto">
+                  <img src="" class="card-img-top mt-2" style="display:block; margin:auto">
+                  <div class="card-body">
+                    <h5 class="card-title">Obertraun</h5>
+                    <p class="card-text">纜車總共有3段，在obertraun搭第1段纜車會到Ice & Mammut cave，據說是世界最大且最長的洞穴系統，且洞穴長度仍持續在成長。但因為我們時間與天氣的因素只能去五指觀景台，所以洞穴沒有參觀。<br>第2段纜車會到接近五指觀景台的附近，下車後仍需走2公里左右，沿途的景色很像是星際效應的場景，看上去非常震撼，甚至能看到對面的山頂的湖口。<br>我們選擇的是57歐的票，票的內容包含第1和第2段纜車的來回與冰洞或猛瑪洞的導覽(選其一)。雖然沒有參觀到冰洞，但五指觀景台往下看的風景與沿途景色已經非常值得了!!!(雖然票價為57歐，但詢問旅館會有折扣的小卡，應該會折1.多歐)</p>
+                    <a target="_blank" href="https://dachstein-salzkammergut.com/en/tickets-offers/tickets-summer/single-tariffs" class="btn btn-secondary">2023年summer single ticket票價，能清楚看到不同組合的票價與內容包含的纜車段數。</a>
+                  </div>
+                </div>
+                <!-- ok -->
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="hallstatt & obertraun/IMG_0870.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">纜車下車後到五指觀景台的沿途都是石頭路，而且天氣變化很大，因為約位在海拔2000m以上，氣溫比平地低10度以上，穿薄外套還是會有點冷。</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="hallstatt & obertraun/IMG_0893.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">山頂的對面可見非常明顯的湖，而且會人覺得雲離山頂很接近。</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="hallstatt & obertraun/IMG_0919.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">遠看的景色是綠色矮叢數跟石頭，非常壯觀。</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="hallstatt & obertraun/IMG_0922.jpg" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">遠方的湖是哈修塔特湖，可以知道obertraun離hallstatt是有些距離的。</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="hallstatt & obertraun/IMG_0998.JPG" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">五指觀景台的其中一指，很多人會在這裡拍照。</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="hallstatt & obertraun/IMG_1027.JPG" class="card-img-top">
+                      <div class="card-body">
+                        <p class="card-text">除了五指觀景台外，下纜車後還有其他地方能參觀，像教堂或餐廳等。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ok -->
+                <div class="card mb-3 mt-3">
+                  <img src="hallstatt & obertraun/IMG_1195.jpg" class="card-img-top" style="display:block; margin:auto">
+                  <div class="card-body">
+                    <h5 class="card-title">Salt mine</h5>
+                    <p class="card-text">hallstatt另一個有名的景點是鹽礦(salt mine)，此景點需要搭纜車上去，且此纜車票與obertraun的纜車票不能共用，所以需要額外買票。照片是鹽礦的買票入口，因為岩礦內氣溫相當低，會讓大家穿上防寒衣，途中還會有解說(德文、英文)，介紹鹽礦的發展歷史，鹽礦地形如何發展形成。</p>
+                    <a target="_blank" href="https://www.salzwelten.at/en/altaussee/prices-opening-hours" class="btn btn-secondary">2023 & 2024年salt mine ticket票價與營業時間。</a>
+                    <p class="card-text mt-1">需注意整年營業時間不同，且2024年11/4到12/24因整修停止開放停止，此外向旅館飯店櫃檯也許能拿到折扣卡。</p>
+                  </div>
+                </div>
+                <div class="card mb-3 mt-3">
+                  <img src="hallstatt & obertraun/IMG_1176.jpg" class="card-img-top" style="display:block; margin:auto">
+                  <img src="hallstatt & obertraun/IMG_1256.jpg" class="card-img-top mt-2" style="display:block; margin:auto">
+                  <div class="card-body">
+                    <p class="card-text">鹽礦裡面相機不太好拍出好看照片，所以就不放出來了。不過纜車下車到鹽礦賣票區這段路景色也很漂亮，從上而下看湖的景色跟obertraun看到的又是不一樣的感覺，此外這邊也有一個觀景台可以拍照。</p>
+                    <h5 class="card-title">Summary</h5>
+                    <p class="card-text">Hallstatt和Obertraun給我的感覺是很悠閒舒適的，小鎮的步調非常慢，晚上8.後路上和馬路幾乎沒車沒人了，此小鎮不像布拉格歷史建築與教堂很多、或像維也納充滿藝術氣息，但是喜歡登山、山景、湖景與自然景色的，我想一定會愛上obertraun。</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+        <!-- end col-md-9 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+
+
+
+      <script>
+      </script>
+  </body>
+</html>
