@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>kaggle sharing-Fortune 1000</title>
+  </head>
+  <body style="background-color:#dee2e6">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html">CY's Life</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Battery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Travel</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Class
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Study note</a></li>
+                  <li><a class="dropdown-item" href="#">Leetcode</a></li>
+                  <li><a class="dropdown-item" href="#">Data analysis</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <div class="banner">
+        <img src="backgroundpic.jpg" class="w-100">
+    </div>
+
+    <div class="container-fluid mt-3" >
+      <div class="row"> 
+        <div class="col-12 col-md-3" >
+          <div class="col">
+            <div class="card">
+              <img src="selfprofilepic.jpg" class="card-img-top rounded-circle" alt="self picture of CY">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size:25px;font-weight:bold;">CY Wu</h5>
+                  <p class="card-text" style="font-size:18px;">This is me who never ever stop learning.</p>
+                    <div class="row">
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="http://www.linkedin.com/in/samwucy" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="https://github.com/chengyenwu" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+            
+        
+            
+        <div class="col-12 col-md-9" >
+          <div class="col">
+            <div class="card">
+              <div class="card-body" >
+                <h2 class="card-title" >kaggle sharing-Fortune 1000</h2>
+                <h3 class="card-subtitle mt-3">Introduction</h3>
+                <p class="mt-3" style="font-size:18px;">Fortune-1000列舉了全美1000間最大公司，sector(領域)從零售業、科技、能源、金融、健康照護等，數據包括revenue、profit、員工人數、女性ceo人數等。能從Fortune-1000得到全美revenue、profit與產業領域、員工人數的相關性。此外，女性ceo在各領域的比例也能從fortune-1000的資料中得到。</p>
+                <img src="fortune-1000.png" class="img-fluid mt-4 w-35" style="display:block;margin:auto;" alt="fortune-1000">
+                <h3 class="card-subtitle mt-3">Data</h3>
+                <p class="mt-3" style="font-size:18px;">data可以從Fortune.com取得[1]，此dataset在kaggle上也能輕易下載下來進行分析[2]。非常謝謝kaggle上有前人分析整理並提供程式碼，研究到一篇bronze獎的分析，大幅加速自己對資料分析的認識與基礎[3]。</p>
+                <h3 class="card-subtitle mt-3">Importing package</h3>
+                <p class="mt-3" style="font-size:18px;">import pandas as pd<br>import numpy as np<br>import matplotlib.pyplot as plt<br>import squarify<br>import seaborn as sns</p>
+                <h3 class="card-subtitle">Data cleaning & Check data</h3>
+                <p class="mt-3" style="font-size:18px;"><b>df = pd.read_csv("Fortune_1000.csv")</b></p>
+                <pre>
+                    RangeIndex: 1000 entries, 0 to 999
+                    Data columns (total 18 columns):
+                     #   Column             Non-Null Count  Dtype  
+                    ---  ------             --------------  -----  
+                     0   company            1000 non-null   object 
+                     1   rank               1000 non-null   int64  
+                     2   rank_change        1000 non-null   float64
+                     3   revenue            1000 non-null   float64
+                     4   profit             997 non-null    float64
+                     5   num. of employees  999 non-null    float64
+                     6   sector             1000 non-null   object 
+                     7   city               1000 non-null   object 
+                     8   state              1000 non-null   object 
+                     9   newcomer           1000 non-null   object 
+                     10  ceo_founder        1000 non-null   object 
+                     11  ceo_woman          1000 non-null   object 
+                     12  profitable         1000 non-null   object 
+                     13  prev_rank          1000 non-null   object 
+                     14  CEO                1000 non-null   object 
+                     15  Website            1000 non-null   object 
+                     16  Ticker             951 non-null    object 
+                     17  Market Cap         969 non-null    object 
+                    dtypes: float64(4), int64(1), object(13)
+                    memory usage: 140.8+ KB
+                    None
+                </pre>
+                <p class="mt-3" style="font-size:18px;">移除掉column中的space和把所有欄位的字都改成小寫。<br><b>df.columns = df.columns.str.strip().str.lower()</b></p>
+                <p class="mt-3" style="font-size:18px;">因私人公司不一定有ticker symbol(股票代號)，需要填入N/A以免後許資料分析時出現錯誤。<br><b>df['ticker'].fillna('N/A', inplace=True)</b></p>
+                <p class="mt-3" style="font-size:18px;">將profit與員工人數(num. of employees)欄位中缺項的直接刪除。<br><b>df.dropna(subset=['profit','num. of employees'], inplace=True)</b></p>
+                <p class="mt-3" style="font-size:18px;">再將ceo_woman、ceo_founder、newcomer、profitable的yes,no改成boolean值，以便後續分析。<br><b>df['ceo_woman'] = np.where(df['ceo_woman'] == 'yes', True, False)</b><br><b>df['ceo_founder']=np.where(df['ceo_founder'] == 'yes', True, False)</b><br><b>df['newcomer']= np.where(df['newcomer'] == 'yes', True, False)</b><br><b>df['profitable']=np.where(df['profitable'] == 'yes', True, False)</b><br><b>print(df.info())</b></p>
+                <pre>
+                    Index: 996 entries, 0 to 999
+                    Data columns (total 18 columns):
+                    #   Column             Non-Null Count  Dtype  
+                    ---  ------             --------------  -----  
+                    0   company            996 non-null    object 
+                    1   rank               996 non-null    int64  
+                    2   rank_change        996 non-null    float64
+                    3   revenue            996 non-null    float64
+                    4   profit             996 non-null    float64
+                    5   num. of employees  996 non-null    float64
+                    6   sector             996 non-null    object 
+                    7   city               996 non-null    object 
+                    8   state              996 non-null    object 
+                    9   newcomer           996 non-null    bool   
+                    10  ceo_founder        996 non-null    bool   
+                    11  ceo_woman          996 non-null    bool   
+                    12  profitable         996 non-null    bool   
+                    13  prev_rank          996 non-null    object 
+                    14  ceo                996 non-null    object 
+                    15  website            996 non-null    object 
+                    16  ticker             996 non-null    object 
+                    17  market cap         966 non-null    object 
+                    dtypes: bool(4), float64(4), int64(1), object(9)
+                    memory usage: 120.6+ KB
+                    None
+                </pre>
+                <p class="mt-3" style="font-size:18px;">可以特定搜尋fortune-1000的任一一間公司，得到所有資訊，以半導體製程設備商Lam Research為例:<br><b>print(df.loc[df['company']=='Lam Research'])</b></p>
+                <pre>
+                    company  rank  rank_change  revenue  profit  num. of employees  \
+                    249  Lam Research   250         54.0  14626.2  3908.5            14100.0   
+                    
+                             sector     city state  newcomer  ceo_founder  ceo_woman  profitable  \
+                    249  Technology  Fremont    CA     False        False      False        True   
+                    
+                        prev_rank                ceo                      website ticker  \
+                    249     304.0  Timothy M. Archer  https://www.lamresearch.com   LRCX   
+                    
+                        market cap  
+                    249    74996.7  
+                </pre>
+                <p class="mt-3" style="font-size:18px;">再次確認df中有無任何缺失值。<br><b>df.isnull().any()</b></p>
+                <pre>
+                    company              False
+                    rank                 False
+                    rank_change          False
+                    revenue              False
+                    profit               False
+                    num. of employees    False
+                    sector               False
+                    city                 False
+                    state                False
+                    newcomer             False
+                    ceo_founder          False
+                    ceo_woman            False
+                    profitable           False
+                    prev_rank            False
+                    ceo                  False
+                    website              False
+                    ticker               False
+                    market cap            True
+                    dtype: bool
+                </pre>
+                <p class="mt-3" style="font-size:18px;">Q1: 各州公司數量:<br><b>state_count = df[['company','sector','state']]</b><br><b>state_count = state_count.groupby(['state'], as_index=False)['company'].count()</b><br><b>state_count.rename(columns={'company':'company_count'}, inplace=True)</b><br><b>state_count.sort_values(by='company_count', inplace=True, ascending=False)</b><br><b>print(state_count.head(20))</b></p>
+                <pre>
+                       state  company_count
+                    3     CA            131
+                    40    TX             97
+                    31    NY             86
+                    13    IL             62
+                    32    OH             54
+                    35    PA             45
+                    8     FL             38
+                    42    VA             34
+                    9     GA             34
+                    18    MA             33
+                    21    MI             30
+                    25    NC             29
+                    22    MN             27
+                    29    NJ             23
+                    5     CT             23
+                    39    TN             22
+                    23    MO             21
+                    45    WI             21
+                    4     CO             21
+                    2     AZ             20
+                </pre>
+                <p class="mt-3" style="font-size:18px;">Q2: 女性ceo數量:<br><b>woman_df = df[['company','sector','ceo_woman']]</b><br><b>woman_df = woman_df[woman_df['ceo_woman']==True]</b><br><b>woman_df = woman_df.groupby(['sector'], as_index=False)['ceo_woman'].count()</b><br><b>woman_df.sort_values(by='ceo_woman', ascending=False, inplace=True)</b><br><b>woman_df</b></p>
+                <pre>
+                                             sector  ceo_woman
+                  16                      Retailing         14
+                  6                      Financials         12
+                  4                          Energy          9
+                  9                     Health Care          9
+                  17                     Technology          7
+                  0             Aerospace & Defense          4
+                  11             Household Products          4
+                  13                      Materials          4
+                  12                    Industrials          4
+                  18                 Transportation          2
+                  10  Hotels, Restaurants & Leisure          2
+                  8       Food, Beverages & Tobacco          2
+                  7              Food & Drug Stores          2
+                  2               Business Services          2
+                  1                         Apparel          1
+                  14                          Media          1
+                  15         Motor Vehicles & Parts          1
+                  5      Engineering & Construction          1
+                  3                       Chemicals          1
+                  19                    Wholesalers          1
+                </pre>
+                <p class="mt-3" style="font-size:18px;">Next: Visualization</p>
+                <pre>
+                  y = woman_df['sector']
+                  width = woman_df['ceo_woman']
+                  color = ['darksalmon','darkolivegreen','steelblue','darkorange','palevioletred','darkseagreen','midnightblue']
+                  plt.barh(width=width, y=y, color=color, edgecolor='dimgrey')
+                  plt.title('Number of Woman CEO per sector', fontsize=20, color='darkcyan')
+                  percent_woman = round(df['ceo_woman'].sum()/1000 *100, 1)
+                  percent_retail = round(woman_df.iloc[0,1]/woman_df['ceo_woman'].sum() *100, 1)
+                  percent_financial = round(woman_df.iloc[1,1]/woman_df['ceo_woman'].sum() *100, 1)
+                  plt.annotate(
+                      text='In the fortune 1000 companies, \nonly {a}% of the CEOs are women. \nBesides, {b}% and {c}% of these women \nare in retailing and financial sector.'.format(a=percent_woman, b=percent_retail, c=percent_financial), 
+                      xy=(5,12), 
+                      fontsize=10,
+                      backgroundcolor='wheat')
+                </pre>
+                <img src="woman_ceo.png" class="img-fluid mt-3" style="display:block;margin:auto;" alt="woman ceo">
+                <p class="mt-3" style="font-size:18px;">Q3: profit前五的女性ceo公司為何?</p>
+                <p class="mt-3" style="font-size:18px;"><b>woman_ceo = df[['company','profit','revenue','ceo_woman','ceo']]</b><br><b>woman_ceo = woman_ceo[woman_ceo['ceo_woman']==True]</b><br><b>woman_ceo.sort_values(by='profit', ascending=False, inplace=True)</b><br><b>woman_ceo.head()</b></p>
+                  <div>
+                    <style scoped>
+                        .dataframe tbody tr th:only-of-type {
+                            vertical-align: middle;
+                        }
+                    
+                        .dataframe tbody tr th {
+                            vertical-align: top;
+                        }
+                    
+                        .dataframe thead th {
+                            text-align: right;
+                        }
+                    </style>
+                    <table border="1" class="dataframe">
+                      <thead>
+                        <tr style="text-align: right;">
+                          <th></th>
+                          <th>company</th>
+                          <th>profit</th>
+                          <th>revenue</th>
+                          <th>ceo_woman</th>
+                          <th>ceo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>43</th>
+                          <td>Citigroup</td>
+                          <td>21952.0</td>
+                          <td>79865.0</td>
+                          <td>True</td>
+                          <td>Jane Fraser</td>
+                        </tr>
+                        <tr>
+                          <th>90</th>
+                          <td>Oracle</td>
+                          <td>13746.0</td>
+                          <td>40479.0</td>
+                          <td>True</td>
+                          <td>Safra A. Catz</td>
+                        </tr>
+                        <tr>
+                          <th>33</th>
+                          <td>United Parcel Service</td>
+                          <td>12890.0</td>
+                          <td>97287.0</td>
+                          <td>True</td>
+                          <td>Carol B. Tomé</td>
+                        </tr>
+                        <tr>
+                          <th>24</th>
+                          <td>General Motors</td>
+                          <td>10019.0</td>
+                          <td>127004.0</td>
+                          <td>True</td>
+                          <td>Mary T. Barra</td>
+                        </tr>
+                        <tr>
+                          <th>3</th>
+                          <td>CVS Health</td>
+                          <td>7910.0</td>
+                          <td>292111.0</td>
+                          <td>True</td>
+                          <td>Karen Lynch</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                <p class="mt-3" style="font-size:18px;">Q4: profit前五的領域(sector)為何?</p>
+                <pre>
+                  sector_df = df[['sector','profit','company']]
+                  sector_sum_df = sector_df.groupby(['sector'], as_index=False).sum('profit')
+                  sector_sum_df.sort_values(by='profit', ascending=False, inplace=True)
+                  sector_sum_df.head()
+                  sector_sum_df_top5 = sector_sum_df.head()
+                  squarify.plot(
+                      sizes=sector_sum_df_top5['profit'],
+                      label=sector_sum_df_top5['sector'],
+                      alpha=0.5,
+                      text_kwargs={'fontsize':10},
+                      color=color)
+                  plt.title('Profit percentage of top 5 sector', fontsize=18, color='navy')
+                </pre>
+                  <div>
+                    <style scoped>
+                        .dataframe tbody tr th:only-of-type {
+                            vertical-align: middle;
+                        }
+                    
+                        .dataframe tbody tr th {
+                            vertical-align: top;
+                        }
+                    
+                        .dataframe thead th {
+                            text-align: right;
+                        }
+                    </style>
+                    <table border="1" class="dataframe">
+                      <thead>
+                        <tr style="text-align: right;">
+                          <th></th>
+                          <th>sector</th>
+                          <th>profit</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>6</th>
+                          <td>Financials</td>
+                          <td>556635.2</td>
+                        </tr>
+                        <tr>
+                          <th>17</th>
+                          <td>Technology</td>
+                          <td>459503.3</td>
+                        </tr>
+                        <tr>
+                          <th>9</th>
+                          <td>Health Care</td>
+                          <td>209442.4</td>
+                        </tr>
+                        <tr>
+                          <th>4</th>
+                          <td>Energy</td>
+                          <td>139828.6</td>
+                        </tr>
+                        <tr>
+                          <th>16</th>
+                          <td>Retailing</td>
+                          <td>126835.7</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                <img src="profit top5 sector added percentage.png.jpg" class="img-fluid mt-3" style="display:block;margin:auto;" alt="top 5 sector profit percentage">
+                <p class="mt-3" style="font-size:18px;">Q5: revenue與領域(sector)及員工人數的關係為何、以視覺化為例[4]。</p>
+                <pre>
+                  reve = df.groupby(['sector'])['revenue'].mean().sort_values(ascending=False)
+                  print(reve.head())
+                  plt.bar(reve.index, reve.values)
+                  plt.title('Mean revenue per sector', fontsize=20, color='darkcyan')
+                  plt.xticks(rotation=90)
+                  plt.show()
+                  ax = sns.scatterplot(x=df['num. of employees'], y=df['revenue'], hue=df['sector'], size=df['profit'], data=df, sizes=(10, 500))
+                  ax.legend(loc='upper left', bbox_to_anchor=(1,1))
+                </pre>
+                <img src="mean revenue per sector.png" class="img-fluid" alt="mean revenue per sector">
+                <img src="revenue versus num.of employees.png" class="img-fluid mt-3" alt="relationship between revenue and num. of employees">
+                <h3 class="mt-3" style="font-size:18px;">Source</h3>
+                [1] <a href="https://fortune.com/">Fortune</a><br>
+                [2] <a href="https://www.kaggle.com/winston56/fortune-500-data-2021">2022 Fortune 1000</a><br>
+                [3] <a href="https://www.kaggle.com/code/nataliadelarosa/fortune-1000-eda">Fortune 1000 EDA</a><br>
+                [4] <a href="https://www.kaggle.com/code/sasakitetsuya/fortune1000-eda-clustering">Fortune1000 EDA$Clustering</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end col-md-9 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+
+
+
+      <script>
+      </script>
+  </body>
+</html>
