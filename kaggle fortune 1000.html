@@ -91,10 +91,10 @@
                 <img src="fortune-1000.png" class="img-fluid mt-4 w-35" style="display:block;margin:auto;" alt="fortune-1000">
                 <h3 class="card-subtitle mt-3">Data</h3>
                 <p class="mt-3" style="font-size:18px;">data可以從Fortune.com取得[1]，此dataset在kaggle上也能輕易下載下來進行分析[2]。非常謝謝kaggle上有前人分析整理並提供程式碼，研究到一篇bronze獎的分析，大幅加速自己對資料分析的認識與基礎[3]。</p>
-                <h3 class="card-subtitle mt-3">Importing package</h3>
-                <p class="mt-3" style="font-size:18px;">import pandas as pd<br>import numpy as np<br>import matplotlib.pyplot as plt<br>import squarify<br>import seaborn as sns</p>
-                <h3 class="card-subtitle">Data cleaning & Check data</h3>
-                <p class="mt-3" style="font-size:18px;"><b>df = pd.read_csv("Fortune_1000.csv")</b></p>
+                <h3 class="card-subtitle mt-3 mb-3">Importing package</h3>
+                <script src="https://gist.github.com/chengyenwu/4147559f21e4f31786636383196d447d.js"></script>
+                <h3 class="card-subtitle mb-3">Data cleaning & Check data</h3>
+                <script src="https://gist.github.com/chengyenwu/cf6065d4f492e23d78365fff263c0dab.js"></script>
                 <pre>
                     RangeIndex: 1000 entries, 0 to 999
                     Data columns (total 18 columns):
@@ -122,10 +122,7 @@
                     memory usage: 140.8+ KB
                     None
                 </pre>
-                <p class="mt-3" style="font-size:18px;">移除掉column中的space和把所有欄位的字都改成小寫。<br><b>df.columns = df.columns.str.strip().str.lower()</b></p>
-                <p class="mt-3" style="font-size:18px;">因私人公司不一定有ticker symbol(股票代號)，需要填入N/A以免後許資料分析時出現錯誤。<br><b>df['ticker'].fillna('N/A', inplace=True)</b></p>
-                <p class="mt-3" style="font-size:18px;">將profit與員工人數(num. of employees)欄位中缺項的直接刪除。<br><b>df.dropna(subset=['profit','num. of employees'], inplace=True)</b></p>
-                <p class="mt-3" style="font-size:18px;">再將ceo_woman、ceo_founder、newcomer、profitable的yes,no改成boolean值，以便後續分析。<br><b>df['ceo_woman'] = np.where(df['ceo_woman'] == 'yes', True, False)</b><br><b>df['ceo_founder']=np.where(df['ceo_founder'] == 'yes', True, False)</b><br><b>df['newcomer']= np.where(df['newcomer'] == 'yes', True, False)</b><br><b>df['profitable']=np.where(df['profitable'] == 'yes', True, False)</b><br><b>print(df.info())</b></p>
+                <script src="https://gist.github.com/chengyenwu/8382b9811b0b51a9bc20ff074e7ad669.js"></script>
                 <pre>
                     Index: 996 entries, 0 to 999
                     Data columns (total 18 columns):
@@ -153,7 +150,7 @@
                     memory usage: 120.6+ KB
                     None
                 </pre>
-                <p class="mt-3" style="font-size:18px;">可以特定搜尋fortune-1000的任一一間公司，得到所有資訊，以半導體製程設備商Lam Research為例:<br><b>print(df.loc[df['company']=='Lam Research'])</b></p>
+                <script src="https://gist.github.com/chengyenwu/163992920984536611aefdcb0a4298f3.js"></script>
                 <pre>
                     company  rank  rank_change  revenue  profit  num. of employees  \
                     249  Lam Research   250         54.0  14626.2  3908.5            14100.0   
@@ -167,7 +164,7 @@
                         market cap  
                     249    74996.7  
                 </pre>
-                <p class="mt-3" style="font-size:18px;">再次確認df中有無任何缺失值。<br><b>df.isnull().any()</b></p>
+                <script src="https://gist.github.com/chengyenwu/e0dfbe1fddf1640610f1e215b507abcb.js"></script>
                 <pre>
                     company              False
                     rank                 False
@@ -189,7 +186,7 @@
                     market cap            True
                     dtype: bool
                 </pre>
-                <p class="mt-3" style="font-size:18px;">Q1: 各州公司數量:<br><b>state_count = df[['company','sector','state']]</b><br><b>state_count = state_count.groupby(['state'], as_index=False)['company'].count()</b><br><b>state_count.rename(columns={'company':'company_count'}, inplace=True)</b><br><b>state_count.sort_values(by='company_count', inplace=True, ascending=False)</b><br><b>print(state_count.head(20))</b></p>
+                <script src="https://gist.github.com/chengyenwu/62f8d9fc3dae08d995d584679acfdaa8.js"></script>
                 <pre>
                        state  company_count
                     3     CA            131
@@ -213,7 +210,7 @@
                     4     CO             21
                     2     AZ             20
                 </pre>
-                <p class="mt-3" style="font-size:18px;">Q2: 女性ceo數量:<br><b>woman_df = df[['company','sector','ceo_woman']]</b><br><b>woman_df = woman_df[woman_df['ceo_woman']==True]</b><br><b>woman_df = woman_df.groupby(['sector'], as_index=False)['ceo_woman'].count()</b><br><b>woman_df.sort_values(by='ceo_woman', ascending=False, inplace=True)</b><br><b>woman_df</b></p>
+                <script src="https://gist.github.com/chengyenwu/fcb2c49a7f1f7f341b6fb1c0073e6c8d.js"></script>
                 <pre>
                                              sector  ceo_woman
                   16                      Retailing         14
@@ -238,178 +235,109 @@
                   19                    Wholesalers          1
                 </pre>
                 <p class="mt-3" style="font-size:18px;">Next: Visualization</p>
-                <pre>
-                  y = woman_df['sector']
-                  width = woman_df['ceo_woman']
-                  color = ['darksalmon','darkolivegreen','steelblue','darkorange','palevioletred','darkseagreen','midnightblue']
-                  plt.barh(width=width, y=y, color=color, edgecolor='dimgrey')
-                  plt.title('Number of Woman CEO per sector', fontsize=20, color='darkcyan')
-                  percent_woman = round(df['ceo_woman'].sum()/1000 *100, 1)
-                  percent_retail = round(woman_df.iloc[0,1]/woman_df['ceo_woman'].sum() *100, 1)
-                  percent_financial = round(woman_df.iloc[1,1]/woman_df['ceo_woman'].sum() *100, 1)
-                  plt.annotate(
-                      text='In the fortune 1000 companies, \nonly {a}% of the CEOs are women. \nBesides, {b}% and {c}% of these women \nare in retailing and financial sector.'.format(a=percent_woman, b=percent_retail, c=percent_financial), 
-                      xy=(5,12), 
-                      fontsize=10,
-                      backgroundcolor='wheat')
-                </pre>
+                <script src="https://gist.github.com/chengyenwu/ec6824a52dab8d6920204f6e762b67ba.js"></script>
                 <img src="woman_ceo.png" class="img-fluid mt-3" style="display:block;margin:auto;" alt="woman ceo">
-                <p class="mt-3" style="font-size:18px;">Q3: profit前五的女性ceo公司為何?</p>
-                <p class="mt-3" style="font-size:18px;"><b>woman_ceo = df[['company','profit','revenue','ceo_woman','ceo']]</b><br><b>woman_ceo = woman_ceo[woman_ceo['ceo_woman']==True]</b><br><b>woman_ceo.sort_values(by='profit', ascending=False, inplace=True)</b><br><b>woman_ceo.head()</b></p>
-                  <div>
-                    <style scoped>
-                        .dataframe tbody tr th:only-of-type {
-                            vertical-align: middle;
-                        }
-                    
-                        .dataframe tbody tr th {
-                            vertical-align: top;
-                        }
-                    
-                        .dataframe thead th {
-                            text-align: right;
-                        }
-                    </style>
-                    <table border="1" class="dataframe">
-                      <thead>
-                        <tr style="text-align: right;">
-                          <th></th>
-                          <th>company</th>
-                          <th>profit</th>
-                          <th>revenue</th>
-                          <th>ceo_woman</th>
-                          <th>ceo</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>43</th>
-                          <td>Citigroup</td>
-                          <td>21952.0</td>
-                          <td>79865.0</td>
-                          <td>True</td>
-                          <td>Jane Fraser</td>
-                        </tr>
-                        <tr>
-                          <th>90</th>
-                          <td>Oracle</td>
-                          <td>13746.0</td>
-                          <td>40479.0</td>
-                          <td>True</td>
-                          <td>Safra A. Catz</td>
-                        </tr>
-                        <tr>
-                          <th>33</th>
-                          <td>United Parcel Service</td>
-                          <td>12890.0</td>
-                          <td>97287.0</td>
-                          <td>True</td>
-                          <td>Carol B. Tomé</td>
-                        </tr>
-                        <tr>
-                          <th>24</th>
-                          <td>General Motors</td>
-                          <td>10019.0</td>
-                          <td>127004.0</td>
-                          <td>True</td>
-                          <td>Mary T. Barra</td>
-                        </tr>
-                        <tr>
-                          <th>3</th>
-                          <td>CVS Health</td>
-                          <td>7910.0</td>
-                          <td>292111.0</td>
-                          <td>True</td>
-                          <td>Karen Lynch</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                <p class="mt-3" style="font-size:18px;">Q4: profit前五的領域(sector)為何?</p>
-                <pre>
-                  sector_df = df[['sector','profit','company']]
-                  sector_sum_df = sector_df.groupby(['sector'], as_index=False).sum('profit')
-                  sector_sum_df.sort_values(by='profit', ascending=False, inplace=True)
-                  sector_sum_df.head()
-                  sector_sum_df_top5 = sector_sum_df.head()
-                  squarify.plot(
-                      sizes=sector_sum_df_top5['profit'],
-                      label=sector_sum_df_top5['sector'],
-                      alpha=0.5,
-                      text_kwargs={'fontsize':10},
-                      color=color)
-                  plt.title('Profit percentage of top 5 sector', fontsize=18, color='navy')
-                </pre>
-                  <div>
-                    <style scoped>
-                        .dataframe tbody tr th:only-of-type {
-                            vertical-align: middle;
-                        }
-                    
-                        .dataframe tbody tr th {
-                            vertical-align: top;
-                        }
-                    
-                        .dataframe thead th {
-                            text-align: right;
-                        }
-                    </style>
-                    <table border="1" class="dataframe">
-                      <thead>
-                        <tr style="text-align: right;">
-                          <th></th>
-                          <th>sector</th>
-                          <th>profit</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>6</th>
-                          <td>Financials</td>
-                          <td>556635.2</td>
-                        </tr>
-                        <tr>
-                          <th>17</th>
-                          <td>Technology</td>
-                          <td>459503.3</td>
-                        </tr>
-                        <tr>
-                          <th>9</th>
-                          <td>Health Care</td>
-                          <td>209442.4</td>
-                        </tr>
-                        <tr>
-                          <th>4</th>
-                          <td>Energy</td>
-                          <td>139828.6</td>
-                        </tr>
-                        <tr>
-                          <th>16</th>
-                          <td>Retailing</td>
-                          <td>126835.7</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                <img src="profit top5 sector added percentage.png.jpg" class="img-fluid mt-3" style="display:block;margin:auto;" alt="top 5 sector profit percentage">
-                <p class="mt-3" style="font-size:18px;">Q5: revenue與領域(sector)及員工人數的關係為何、以視覺化為例[4]。</p>
-                <pre>
-                  reve = df.groupby(['sector'])['revenue'].mean().sort_values(ascending=False)
-                  print(reve.head())
-                  plt.bar(reve.index, reve.values)
-                  plt.title('Mean revenue per sector', fontsize=20, color='darkcyan')
-                  plt.xticks(rotation=90)
-                  plt.show()
-                  ax = sns.scatterplot(x=df['num. of employees'], y=df['revenue'], hue=df['sector'], size=df['profit'], data=df, sizes=(10, 500))
-                  ax.legend(loc='upper left', bbox_to_anchor=(1,1))
-                </pre>
+                <script src="https://gist.github.com/chengyenwu/22359c1f8a66134e343aa2ea4e0cba1d.js"></script>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">company</th>
+                      <th scope="col">profit</th>
+                      <th scope="col">revenue</th>
+                      <th scope="col">ceo_woman</th>
+                      <th scope="col">ceo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">43</th>
+                      <td>Citigroup</td>
+                      <td>21952.0</td>
+                      <td>79865.0</td>
+                      <td>True</td>
+                      <td>Jane Fraser</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">90</th>
+                      <td>Oracle</td>
+                      <td>13746.0</td>
+                      <td>40479.0</td>
+                      <td>True</td>
+                      <td>Safra A. Catz</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">33</th>
+                      <td>United Parcel Service</td>
+                      <td>12890.0</td>
+                      <td>97287.0</td>
+                      <td>True</td>
+                      <td>Carol B. Tomé</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">24</th>
+                      <td>General Motors</td>
+                      <td>10019.0</td>
+                      <td>127004.0</td>
+                      <td>True</td>
+                      <td>Mary T. Barra</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>CVS Health</td>
+                      <td>7910.0</td>
+                      <td>292111.0</td>
+                      <td>True</td>
+                      <td>Karen Lynch</td>
+                    </tr>
+                  </tbody>
+                </table>
+                  <script src="https://gist.github.com/chengyenwu/7910fa2673ae4f09aa26b8e9a11f60c4.js"></script>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">sector</th>
+                      <th scope="col">profit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Financials</td>
+                      <td>556635.2</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">17</th>
+                      <td>Technology</td>
+                      <td>459503.3</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">9</th>
+                      <td>Health Care</td>
+                      <td>209442.4</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Energy</td>
+                      <td>139828.6</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">16</th>
+                      <td>Retailing</td>
+                      <td>126835.7</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <img src="profit top5 sector added percentage.png.jpg" class="img-fluid mt-3" style="display:block; margin:auto; height:60%; width: 60%" alt="top 5 sector profit percentage">
+                <script src="https://gist.github.com/chengyenwu/b16526ea125eba952949951fb097e3b6.js"></script>
                 <img src="mean revenue per sector.png" class="img-fluid" alt="mean revenue per sector">
                 <img src="revenue versus num.of employees.png" class="img-fluid mt-3" alt="relationship between revenue and num. of employees">
                 <h3 class="mt-3" style="font-size:18px;">Source</h3>
                 [1] <a href="https://fortune.com/">Fortune</a><br>
                 [2] <a href="https://www.kaggle.com/winston56/fortune-500-data-2021">2022 Fortune 1000</a><br>
                 [3] <a href="https://www.kaggle.com/code/nataliadelarosa/fortune-1000-eda">Fortune 1000 EDA</a><br>
-                [4] <a href="https://www.kaggle.com/code/sasakitetsuya/fortune1000-eda-clustering">Fortune1000 EDA$Clustering</a><br>
+                [4] <a href="https://www.kaggle.com/code/sasakitetsuya/fortune1000-eda-clustering">Fortune1000 EDA&Clustering</a><br>
               </div>
             </div>
           </div>
