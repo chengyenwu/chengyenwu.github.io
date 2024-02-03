@@ -46,7 +46,7 @@
     </nav>
     
     <div class="banner">
-        <img src="backgroundpic.jpg" class="w-100">
+        <img src="figure/backgroundpic.jpg" class="w-100">
     </div>
 
     <div class="container-fluid mt-3" >
@@ -54,7 +54,7 @@
         <div class="col-12 col-md-3" >
           <div class="col">
             <div class="card">
-              <img src="selfprofilepic.jpg" class="card-img-top rounded-circle" alt="self picture of CY">
+              <img src="figure/selfprofilepic.jpg" class="card-img-top rounded-circle" alt="self picture of CY">
               <div class="card-body">
                 <h5 class="card-title" style="font-size:25px;font-weight:bold;">CY Wu</h5>
                   <p class="card-text" style="font-size:18px;">This is me who never ever stop learning.</p>
@@ -87,16 +87,16 @@
               <div class="card-body" >
                 <h2 class="card-title" >Binary search tree traversal</h2>
                 <h4 class="card-subtitle mt-3">Pre、In、Post-ordered</h4>
-                <img src="binary search tree.jpg" class="img-fluid mt-4" style="display:block;margin:auto;" alt="binary search tree meme">
+                <img src="figure/binary search tree.jpg" class="img-fluid mt-4" style="display:block;margin:auto;" alt="binary search tree meme">
                 <p class="mt-4" style="font-size:18px;">Binary search tree traversal因為需要走訪每個節點，所需的時間複雜度就為O(N)，空間複雜度也為O(N)。<br>而traversal可分為三種方式: 1. Pre-order(前序遍歷)，其實就是Depth-first search。2. In-order(中序遍歷) 與 3. Post-order(後序遍歷)，In-order與Post-order也是Depth-first search的應用，只是稍微改變節點輸出的順序。此外還有一種Traversal為level-order traversal(層序遍歷)，是Breadth-first search。</p>
-                <img src="tree traversal.jpg" class="img-fluid mt-4" style="display:block;margin:auto; width:300px;" alt="tree traversal">
+                <img src="figure/tree traversal.jpg" class="img-fluid mt-4" style="display:block;margin:auto; width:300px;" alt="tree traversal">
                 <p class="mt-4" style="font-size:18px;">我們可以由上面的示意圖看到一個節點會有三次到達方式: 1. 從父節點第一次抵達此節點。2. 往左邊的子節點走，並第二次回到此節點。3. 走完左邊所有子節點後，拜訪右邊的子節點後，第三次回到此節點。<br>Pre-order是<b>剛拜訪節點就直接print節點的資訊</b>。In-order是到達節點後不直接print，而是<b>盡量拜訪左方的子節點，當無左方的子節點時第二次回到節點，同時print節點資訊</b>。Post-order則是當左方子節點皆已拜訪過，<b>往右方子節點拜訪，第三次回到此節點同時print節點資訊</b>。</p>
                 <p class="mt-3" style="font-size:18px;">以下我們舉一個實際的tree來看看Pre、In、Post-ordered印出來的節點順序為何</p>
-                <img src="practical tree.jpg" class="img-fluid mt-4" style="display:block;margin:auto; width:300px;" alt="practical tree">
+                <img src="figure/practical tree.jpg" class="img-fluid mt-4" style="display:block;margin:auto; width:300px;" alt="practical tree">
                 <p class="mt-4" style="font-size:21px;">1. pre-order: <b>G, D, B, F, A, H, E, I, C。</b><br>2. In-order: <b>D, F, B, G, E, H, I, A, C。</b><br>3. Post-order: <b>F, B, D, E, I, H, C, A, G。</b><br>(4. 還有另一種traversal為level-order traversal，依照從上到下、從左到右的順序拜訪並且print節點資訊，所以print結果應為: <b>G, D, A, B, H, C, F, E, I。)</b><br><br>關於traversal的程式碼我們可以簡單寫成:</p>
-                <img src="simple code for three traversal.jpg" class="img-fluid mt-4" style="display:block;margin:auto; height:300px;" alt="simple code for three traversal">
+                <img src="figure/simple code for three traversal.jpg" class="img-fluid mt-4" style="display:block;margin:auto; height:300px;" alt="simple code for three traversal">
                 <p class="mt-4" style="font-size:18px;">最後，我們可由<b>Pre-和In-order</b> 或 <b>Post-和In-order</b>得到的節點順序建構出原來的binary search tree。如果<b>Pre-order</b>順序為: <b>8, 4, 7, 5, 10, 18, 16, 20</b> 且 <b>In-order</b>的順序為: <b>4, 5, 7, 8, 10, 16, 18, 20</b>。<br><br>1. 首先在Pre-order中第一個數字是8，代表整個tree的root是8，而在In-order中4、5、7比8更早印出，代表<b>4、5、7在root(8)的左方，10、16、18、20則在root(20)的右方</b>。<br><br>2. Pre-order中第二個數字是4且In-order中第一個數字是也是4，代表<b>root(8)左方的節點為4，且4的底下無其他節點</b>。而接下來Pre-order中數字的順序是7、5，In-order中則是5、7，根據Pre-order是第一次拜訪節點及印出資訊的特性，可以知道<b>節點(4)的右方節點是7，節點7底下還有左邊節點5</b>。如此我們已經將root(8)左半邊的tree建構完成。<br><br>3. Pre-order和In-order第五個數字都是10，說明<b>root(8)右邊的子節點為10，且10左方無其他子節點</b>，右方仍有16、18、20。<br><br>4. 最後 Pre-order中順序18、16、20而In-order中順序16、18、20，說明<b>節點10右方子節點為18、18下方左邊子節點為16、右邊子節點為20</b>如此整顆tree建立完成，透過Pre-order 和 In-order的順序能建構原本的tree。</p>
-                <img src="build whole tree.jpg" class="img-fluid mt-4" style="display:block;margin:auto; height:300px;" alt="build whole tree">
+                <img src="figure/build whole tree.jpg" class="img-fluid mt-4" style="display:block;margin:auto; height:300px;" alt="build whole tree">
                 <p class="mt-5" style="font-size:18px;">在Binary search tree In-order traversal中，因為Binary search tree的特性是<b>左方子節點的數值比root小，右方子節點的數值比root大</b>。In-order traversal是第二次回到節點(也就是拜訪完左方所有數值更小的節點後)印出資訊，所以In-order traversal有一個特色是能<b>將數字由小到大印出</b>。</p>
               </div>
           </div>
