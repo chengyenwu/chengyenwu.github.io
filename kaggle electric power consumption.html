@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>kaggle sharing-Electric Power Consumption</title>
+  </head>
+  <body style="background-color:#dee2e6">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">CY's Life</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Battery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Travel</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Class
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Study note</a></li>
+                  <li><a class="dropdown-item" href="#">Leetcode</a></li>
+                  <li><a class="dropdown-item" href="#">Data analysis</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <div class="banner">
+        <img src="figure/backgroundpic.jpg" class="w-100">
+    </div>
+
+    <div class="container-fluid mt-3" >
+      <div class="row"> 
+        <div class="col-12 col-md-3" >
+          <div class="col">
+            <div class="card">
+              <img src="figure/selfprofilepic.jpg" class="card-img-top rounded-circle" alt="self picture of CY">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size:25px;font-weight:bold;">CY Wu</h5>
+                  <p class="card-text" style="font-size:18px;">This is me who never ever stop learning.</p>
+                    <div class="row">
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="http://www.linkedin.com/in/samwucy" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="https://github.com/chengyenwu" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+            
+        
+            
+        <div class="col-12 col-md-9" >
+          <div class="col">
+            <div class="card">
+              <div class="card-body" >
+                <h2 class="card-title" >kaggle sharing-Electric Power Consumption</h2>
+                <h3 class="card-subtitle mt-3">Introduction</h3>
+                <p class="mt-3" style="font-size:18px;">Tetouan是摩洛哥北部的一座城市，位於地中海沿岸，冬季氣候溫和多雨，夏季炎熱乾燥。摩洛哥在2015年關閉唯一煉油廠後，所有石油產品都是進口的(20萬桶/日)，耗電數據是從Amendis的監督控制和數據採集系統(SCADA)收集的，該系統是一家公共服務運營商，自2002年以來一直負責飲用水和電力的分配。配電網路的目的是為Tetouan的中低壓消費者提供服務。為此，Amendis確保從交付點到最終使用者(客戶)的電能交付和分配。分配的能源來自國家電力和飲用水辦公室。將高壓(63 kV)轉換為中壓(20 kV)后，可以傳輸和分配能量。[1]</p>
+                <p class="mt-3" style="font-size:18px;">數據包括 10 分鐘視窗內的 52,416 次能源消耗觀測值，觀測值包含:<br>1. Date time: 每十分鐘做紀錄<br>2. 溫度<br>3. 濕度<br>4. 風速<br>5. General Diffuse Flows(一般擴散流): 描述低溫（<0.2 °C 至 ~ 100 °C）流體，這些流體通過硫化物丘、裂縫熔岩流以及細菌墊和大型動物群的組合緩慢排出。<br>6. 擴散流<br>7. 區域1功耗<br>8. 區域2功耗<br>9. 區域3功耗</p>
+                <img src="figure/dataset-powerconsumption-cover.jpg" class="img-fluid" style="display:block;margin:auto;" alt="cover">
+                
+                <h3 class="card-subtitle mt-3 mb-3">Part 1.: Humidy and Temperature w/ Poer Consumption plot[2]</h3>
+                <h5 class="card-subtitle mt-3 mb-3">Data</h5>
+                <p class="mt-3" style="font-size:18px;">data在kaggle上Electric Power Consumption page上取得。</p>
+                <h5 class="card-subtitle mt-3 mb-3">Importing package</h5>
+                <script src="https://gist.github.com/chengyenwu/f68d73193876ce63230bf3631e5d0ca1.js"></script>
+                <h5 class="card-subtitle mb-3">Data cleaning & Check data</h5>
+                <script src="https://gist.github.com/chengyenwu/45c34b11d88b3b2f63c6bbc450d7869a.js"></script>
+                <pre>
+                    DatetimeIndex: 52416 entries, 2017-01-01 00:00:00 to 2017-12-30 23:50:00
+                    Data columns (total 6 columns):
+                        #   Column                  Non-Null Count  Dtype  
+                    ---  ------                  --------------  -----  
+                        0   temperature             52416 non-null  float64
+                        1   humidity                52416 non-null  float64
+                        2   windspeed               52416 non-null  float64
+                        3   generaldiffuseflows     52416 non-null  float64
+                        4   diffuseflows            52416 non-null  float64
+                        5   powerconsumption_zone2  52416 non-null  float64
+                    dtypes: float64(6)
+                    memory usage: 2.8 MBRangeIndex: 1000 entries, 0 to 999
+                </pre>
+                <div class="table-responsive mb-3">
+                    <table class="table mt-2">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">temperature</th>
+                            <th scope="col">humidity</th>
+                            <th scope="col">windspeed</th>
+                            <th scope="col">generaldiffuseflows</th>
+                            <th scope="col">diffuseflows</th>
+                            <th scope="col">powerconsumption_zone2</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">datetime</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2017-01-01 00:00:00</th>
+                            <td>6.559</td>
+                            <td>73.8</td>
+                            <td>0.083</td>
+                            <td>0.051</td>
+                            <td>0.119</td>
+                            <td>16128.87538</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2017-01-01 00:10:00</th>
+                            <td>6.414</td>
+                            <td>74.5</td>
+                            <td>0.083</td>
+                            <td>0.070</td>
+                            <td>0.085</td>
+                            <td>19375.07599</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2017-01-01 00:20:00</th>
+                            <td>6.313</td>
+                            <td>74.5</td>
+                            <td>0.080</td>
+                            <td>0.062</td>
+                            <td>0.100</td>
+                            <td>19006.68693</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2017-01-01 00:30:00</th>
+                            <td>6.121</td>
+                            <td>75.0</td>
+                            <td>0.083</td>
+                            <td>0.091</td>
+                            <td>0.096</td>
+                            <td>18361.09422</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2017-01-01 00:40:00</th>
+                            <td>5.921</td>
+                            <td>75.7</td>
+                            <td>0.081</td>
+                            <td>0.048</td>
+                            <td>0.085</td>
+                            <td>17872.34043</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="card-subtitle mt-3 mb-3">Humidity and Temperature Scatter plot</h5>
+                <script src="https://gist.github.com/chengyenwu/c28ad857c79905fbafe6fbdb741d60c9.js"></script>
+                <img src="figure/scatter-humidity & temperature.png" class="img-fluid mt-3" style="display:block;margin:auto; width: 50%; height: 50%" alt="scatter-humidity & temperature">
+                <h5 class="card-subtitle mt-3 mb-3">Humidity and Temperature Scatter plot w/ Diffuse and Power Consumption</h5>
+                <script src="https://gist.github.com/chengyenwu/d721c389436169361e2b0416c55af495.js"></script>
+                <img src="figure/diffuse-high.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto; width: 60%; height: 60%" alt="scatter-humidity & temperature">
+                <img src="figure/diffuse-high-power consumption.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto; width:75%; height: 75%" alt="scatter-humidity & temperature">
+                <h5 class="card-subtitle mt-3 mb-3">Humidity and Temperature Scatter plot w/ Diffuse and Power Consumption Summary</h5>
+                <script src="https://gist.github.com/chengyenwu/1068a7a73a25e5a7e00dea2a2b2d6dd9.js"></script>
+                <img src="figure/scatterplot-humidity_temperature_summary-powerconsumption.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto; width:80%; height: 80%" alt="scatter-humidity & temperature saummry plot">
+                <h5 class="card-subtitle mt-3 mb-3">Humidity and Temperature Scatter plot w/ Diffuse and Power Consumption (plotly.express)</h5>
+                <script src="https://gist.github.com/chengyenwu/288fd4014e75228752d1b69fa599d3f5.js"></script>
+                <div class="row row-cols-1">
+                    <div class="col">
+                      <div class="card">
+                        <img src="figure/px-all data.png" class="card-img-top" alt="all">
+                        <div class="card-body">
+                          <p class="card-text">All</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mt-2">
+                      <div class="card">
+                        <img src="figure/px-first quantile.png" class="card-img-top" alt="first quantile">
+                        <div class="card-body">
+                          <p class="card-text">First quantile</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mt-2">
+                      <div class="card">
+                        <img src="figure/px-second quantile.png" class="card-img-top" alt="second quantile">
+                        <div class="card-body">
+                          <p class="card-text">Second quantile</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mt-2">
+                      <div class="card">
+                        <img src="figure/px-third quantile.png" class="card-img-top" alt="third quantile">
+                        <div class="card-body">
+                          <p class="card-text">Third quantile</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mt-2">
+                        <div class="card">
+                          <img src="figure/px-fourth quantile.png" class="card-img-top" alt="fourth quantile">
+                          <div class="card-body">
+                            <p class="card-text">Fourth quantile</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+
+                <h3 class="mt-3 mb-3" style="font-size:18px;"> Part 2.: Correlation between Temperature and Power Consumption[3]</h3>
+                <script src="https://gist.github.com/chengyenwu/53337421bb727270a44c6a4c538cc5f6.js"></script>
+                <img src="figure/heatmap-correlation-powerconsumption.png" class="img-fluid mt-3" style="display:block;margin:auto;" alt="relationship">
+                <script src="https://gist.github.com/chengyenwu/22359c1f8a66134e343aa2ea4e0cba1d.js"></script>
+                <h5 class="card-subtitle mt-3 mb-3">Combined plot-Powercoumption & Temperature-Date</h5>
+                <script src="https://gist.github.com/chengyenwu/859016b413d8d8067e11ca5cd9378520.js"></script>
+                <img src="figure/plot-powercoumption & temperature-date.png" class="img-fluid mt-3" style="display:block;margin:auto; height:60%; width: 60%" alt="combined plot">
+
+                <h5 class="card-subtitle mt-3 mb-3">Scatter plot between Powercoumption & Temperature for Linear and Ploynomial Regression</h5>
+                <script src="https://gist.github.com/chengyenwu/c56b060c055e824b981aca1c7d924dd1.js"></script>
+                <img src="figure/scatter-powerconsumption-temperature.png" class="img-fluid mt-3" style="display:block;margin:auto; height:60%; width: 60%" alt="scatter plot">
+
+                <script src="https://gist.github.com/chengyenwu/d7348139238b37866e6e99b190c51f7b.js"></script>
+                <pre>
+                    Function: power_consumption = temperature*220.41 + 16896.64
+                    R^2 score: 0.17914777151851513
+                </pre>
+                <img src="figure/scatter-powerconsumption-temperature with linear regrssion.png" class="img-fluid" style="display:block;margin:auto; height:60%; width: 60%" alt="scatter plot">
+                <img src="figure/scatter-powerconsumption-date-actuality & prediction(linear).png" class="img-fluid mt-3" style="display:block;margin:auto; height:60%; width: 60%" alt="prediction plot">
+                
+                <script src="https://gist.github.com/chengyenwu/c3f2cfb45b6f91f7c99d4abbf15e3c14.js"></script>
+                <pre>
+                    Function: power_consumption = 26861.28 * (temperature**0) + -899.67 * (temperature**1) + 29.16 * (temperature**2)
+                    R^2 score: 0.26883141005067945
+                </pre>
+                <img src="figure/scatter-powerconsumption-temperature with polynomial regrssion.png" class="img-fluid mt-3" style="display:block;margin:auto; height:60%; width: 60%" alt="scatter plot">
+                <img src="figure/scatter-powerconsumption-date-actuality & prediction(poly).png" class="img-fluid mt-3" style="display:block;margin:auto; height:60%; width: 60%" alt="scatter plot">
+                <h5 class="card-subtitle mt-3 mb-3">Conclusion</h5>
+                <p class="mt-3" style="font-size:18px;">線性回歸沒有與原始資料相當擬合，因此我們嘗試用指數回歸去預測，得到的曲線與原始資料較相符，透過線性與指數回歸預測能得到溫度與電量使用量之間的R square值。</p>
+                <h3 class="mt-3" style="font-size:18px;">Source</h3>
+                [1] <a href="https://www.kaggle.com/datasets/fedesoriano/electric-power-consumption/data">Electric Power Consumption</a><br>
+                [2] <a href="https://www.kaggle.com/code/soufics/viz-electricity">Viz_Electricity</a><br>
+                [3] <a href="https://www.kaggle.com/code/nataliadelarosa/fortune-1000-eda">Average Daily Power Consumption Prediction</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end col-md-9 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+
+
+
+      <script>
+      </script>
+  </body>
+</html>
