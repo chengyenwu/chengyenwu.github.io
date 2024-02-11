@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>kaggle spanish wine price prediction</title>
+  </head>
+  <body style="background-color:#dee2e6">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">CY's Life</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Battery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Travel</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Class
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Study note</a></li>
+                  <li><a class="dropdown-item" href="#">Leetcode</a></li>
+                  <li><a class="dropdown-item" href="#">Data analysis</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <div class="banner">
+        <img src="figure/backgroundpic.jpg" class="w-100">
+    </div>
+
+    <div class="container-fluid mt-3" >
+      <div class="row"> 
+        <div class="col-12 col-md-3" >
+          <div class="col">
+            <div class="card">
+              <img src="figure/selfprofilepic.jpg" class="card-img-top rounded-circle" alt="self picture of CY">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size:25px;font-weight:bold;">CY Wu</h5>
+                  <p class="card-text" style="font-size:18px;">This is me who never ever stop learning.</p>
+                    <div class="row">
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="http://www.linkedin.com/in/samwucy" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="https://github.com/chengyenwu" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+            
+        
+            
+        <div class="col-12 col-md-9" >
+          <div class="col">
+            <div class="card">
+              <div class="card-body" >
+                <h2 class="card-title" >kaggle spanish wine price prediction</h2>
+                <h3 class="card-subtitle mt-3">Introduction</h3>
+                <p class="mt-3" style="font-size:18px;">該數據集包含來自西班牙的 7500 種不同類型的紅葡萄酒，具有 11 個特徵，描述了它們的價格、評級，甚至一些風味描述，目的為預測價格或品質。[1]</p>
+                <p class="mt-3" style="font-size:18px;">數據包含11個類型:<br>1. winery: 酒莊名稱<br>2. wine: 葡萄酒名稱<br>3. year: 葡萄收穫年分<br>4. rating: 葡萄酒的平均評分<br>5. num_reviews: 評論數量。<br>6. country: 原產地，即西班牙<br>7. region: 葡萄酒產區<br>8. price: 價格<br>9. type: 葡萄酒品種。<br>10. body: 酒體評分，代表口中葡萄酒的豐富度和重量。<br>11. acidity: 酸度評分，代表葡萄酒的「皺褶」或酸味。</p>
+                <img src="figure/dataset-wine-spa-cover.jpg" class="img-fluid" style="display:block;margin:auto;" alt="cover">
+                <h3 class="card-subtitle mt-3 mb-3">Price and type relationship</h3>
+                <h5 class="card-subtitle mt-3 mb-3">Data</h5>
+                <p class="mt-3" style="font-size:18px;">data在kaggle上Spanish Wine Quality Dataset page上取得。</p>
+                <h5 class="card-subtitle mt-3 mb-3">Importing package</h5>
+                <script src="https://gist.github.com/chengyenwu/cff3536704f3414d86c094a7ebc0084f.js"></script>
+                <h5 class="card-subtitle mb-3">Data cleaning & Check data</h5>
+                <script src="https://gist.github.com/chengyenwu/3bf50140db6a2dbe5df1169ba0ad1370.js"></script>
+                <pre>
+                    <class 'pandas.core.frame.DataFrame'>
+                        Index: 6070 entries, 0 to 7499
+                        Data columns (total 11 columns):
+                         #   Column       Non-Null Count  Dtype  
+                        ---  ------       --------------  -----  
+                         0   winery       6070 non-null   object 
+                         1   wine         6070 non-null   object 
+                         2   year         6070 non-null   int64  
+                         3   rating       6070 non-null   float64
+                         4   num_reviews  6070 non-null   int64  
+                         5   country      6070 non-null   object 
+                         6   region       6070 non-null   object 
+                         7   price        6070 non-null   float64
+                         8   type         6070 non-null   object 
+                         9   body         6070 non-null   float64
+                         10  acidity      6070 non-null   float64
+                        dtypes: float64(4), int64(2), object(5)
+                        memory usage: 569.1+ KB
+                    </class>
+                </pre>
+                <div class="table-responsive mb-3">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">winery</th>
+                            <th scope="col">wine</th>
+                            <th scope="col">year</th>
+                            <th scope="col">rating</th>
+                            <th scope="col">num_reviews</th>
+                            <th scope="col">region</th>
+                            <th scope="col">price</th>
+                            <th scope="col">type</th>
+                            <th scope="col">body</th>
+                            <th scope="col">acidity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>Teso La Monja</td>
+                            <td>Tinto</td>
+                            <td>2013</td>
+                            <td>4.9</td>
+                            <td>58</td>
+                            <td>Toro</td>
+                            <td>995.00</td>
+                            <td>Toro Red</td>
+                            <td>5.0</td>
+                            <td>3.0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Artadi</td>
+                            <td>Vina El Pison</td>
+                            <td>2018</td>
+                            <td>4.9</td>
+                            <td>31</td>
+                            <td>Vino de Espana</td>
+                            <td>313.50</td>
+                            <td>Tempranillo</td>
+                            <td>4.0</td>
+                            <td>2.0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Vega Sicilia</td>
+                            <td>Unico</td>
+                            <td>2009</td>
+                            <td>4.8</td>
+                            <td>1793</td>
+                            <td>Ribera del Duero</td>
+                            <td>324.95</td>
+                            <td>Ribera Del Duero Red</td>
+                            <td>5.0</td>
+                            <td>3.0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Vega Sicilia</td>
+                            <td>Unico</td>
+                            <td>1999</td>
+                            <td>4.8</td>
+                            <td>1705</td>
+                            <td>Ribera del Duero</td>
+                            <td>692.96</td>
+                            <td>Ribera Del Duero Red</td>
+                            <td>5.0</td>
+                            <td>3.0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Vega Sicilia</td>
+                            <td>Unico</td>
+                            <td>1996</td>
+                            <td>4.8</td>
+                            <td>1309</td>
+                            <td>Ribera del Duero</td>
+                            <td>778.06</td>
+                            <td>Ribera Del Duero Red</td>
+                            <td>5.0</td>
+                            <td>3.0</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="card-subtitle mt-3 mb-3">Vistualization: Heat map[2]</h5>
+                <script src="https://gist.github.com/chengyenwu/0cb3c9cac1fff9cd49d601872e55a02a.js"></script>
+                <img src="figure/heatmap-correlation-wine-spa.png" class="img-fluid mt-3" style="display:block;margin:auto" alt="heat map-wine">
+                <p class="mt-3" style="font-size:18px;">summary: strong relation between price and rating, and specific type of wine will affect price.</p>
+                <h5 class="card-subtitle mt-3 mb-3">relationship between price and wine type[2、3]</h5>
+                <script src="https://gist.github.com/chengyenwu/7575dc89a2f9ed35006c7faa0cbe2cc8.js"></script>
+                <img src="figure/wine price and type bar chart.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto; width: 70%; height: 70%" alt="bar chart">
+                <script src="https://gist.github.com/chengyenwu/a431520d0e8c21a9338102b122162070.js"></script>
+                <img src="figure/wine price and type box chart.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto" alt="scatter-humidity & temperature">
+                <p class="mt-3" style="font-size:18px;">summary: spefic wine have high price, and next step will be finding the model to predict the price.</p>
+                <h5 class="card-subtitle mt-3 mb-3">searching the model[3]</h5>
+                <script src="https://gist.github.com/chengyenwu/907135845201fb301f18878c7ad7f516.js"></script>
+                <pre>
+                    <class 'pandas.core.frame.DataFrame'>
+                        Index: 6070 entries, 0 to 7499
+                        Data columns (total 10 columns):
+                         #   Column       Non-Null Count  Dtype  
+                        ---  ------       --------------  -----  
+                         0   winery       6070 non-null   int32  
+                         1   wine         6070 non-null   int32  
+                         2   year         6070 non-null   int64  
+                         3   rating       6070 non-null   float64
+                         4   num_reviews  6070 non-null   int64  
+                         5   region       6070 non-null   int32  
+                         6   price        6070 non-null   float64
+                         7   type         6070 non-null   int32  
+                         8   body         6070 non-null   float64
+                         9   acidity      6070 non-null   float64
+                        dtypes: float64(4), int32(4), int64(2)
+                        memory usage: 426.8 KB
+                    </class>
+                </pre>
+                <script src="https://gist.github.com/chengyenwu/8f021b1c44fec9cc229c9a2599f00a37.js"></script>
+                <pre>
+                    {'LinearRegression': 0.3997098329164317,
+                     'Lasso': -0.0002825894551166108,
+                     'Ridge': 0.3997079007354649,
+                     'BayesianRidge': 0.3996679858749155,
+                     'DecisionTreeRegressor': 0.3963314565148496,
+                     'LinearSVR': 0.2089817504376078,
+                     'KNeighborsRegressor': 0.5949966180649249,
+                     'RandomForestRegressor': 0.7376611282475856}
+                </pre>
+                <p class="mt-3" style="font-size:18px;">summary: KNeighborsRegressor and RandomForestRegressor have higher r2 factor, hence we use these two models to generate std price vs. index plots.</p>
+                <h5 class="card-subtitle mt-3 mb-3">KNeighborsRegressor model to predict std price</h5>
+                <script src="https://gist.github.com/chengyenwu/c8733a052b60e754aefb733ce1e5107b.js"></script>
+                <pre>
+                          index  y_prediction  y_actual
+                    0      1764     -0.295041 -0.369379
+                    1      1821     -0.178520 -0.353428
+                    2      1835     -0.256382 -0.348233
+                    3      1595     -0.226673 -0.346843
+                    4      1731     -0.208753 -0.345574
+                    ...     ...           ...       ...
+                    1209     42      5.391731  7.383273
+                    1210    100      7.117485  7.882926
+                    1211    595      3.849200  7.892109
+                    1212    199      8.146660  9.494925
+                    1213    332      6.879295  9.622104
+                    
+                    [1214 rows x 3 columns]
+                </pre>
+                <img src="figure/std price prediction-KNeighborsRegressor model.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto" alt="KNeighborsRegressor model">
+                <h5 class="card-subtitle mt-3 mb-3">RandomForestRegressor model to predict std price</h5>
+                <script src="https://gist.github.com/chengyenwu/376d290e14689bd55e9a8fb6a741df25.js"></script>
+                <pre>
+                          index  y_prediction   y_actual
+                    0      1764     -0.251923  -0.369379
+                    1      1947     -0.257671  -0.364968
+                    2      1029     -0.267733  -0.359531
+                    3      1805     -0.183921  -0.355422
+                    4      1821     -0.184619  -0.353428
+                    ...     ...           ...        ...
+                    1209    595      0.269403   7.892109
+                    1210     94     13.041085   7.957844
+                    1211     97      4.603715   8.655424
+                    1212    188      6.941651  10.383123
+                    1213    343      7.828997  16.207611
+                    
+                    [1214 rows x 3 columns]
+                </pre>
+                <img src="figure/std price prediction-RandomForestRegressor model.png" class="img-fluid mt-3" style="display:block;margin:auto;" alt="RandomForestRegressor model">
+                
+                <h5 class="card-subtitle mt-3 mb-3">Conclusion</h5>
+                <p class="mt-3" style="font-size:18px;">首先經由sort_values(by='y_actual')和reset_index()兩指令使得x軸呈現標準化的low price到high price，y軸則為deviation。可見KNeighborsRegressor model 和 RandomForestRegressor model在index 600下都能有效、正確的預測標準化後的wine price。當index超過800甚至到1000以上時兩model得到的prediction value與actual value相差很大，說明此時model無法預測high price下的actual price。其背後的原因為：從box chart中能發現大部分的wine都屬於low price，當資料量夠大時能得到較準確預測pricce的模型。而high price的wine數量非常少，不容易生成準確的model<br>因此，我們能用這兩個model來預測特定type的wine的價格(特別在價格不高時)。此練習使用了各式的model，其各自的模型原理還需要再細看。</p>
+                <h3 class="mt-3" style="font-size:18px;">Source</h3>
+                [1] <a href="https://www.kaggle.com/datasets/fedesoriano/spanish-wine-quality-dataset/data">Spanish Wine Quality Dataset</a><br>
+                [2] <a href="https://www.kaggle.com/code/mohammedsalahuddin/wine-price-eda-regression-analysis">Wine Price EDA + Regression Analysis</a><br>
+                [3] <a href="https://www.kaggle.com/code/ayessa/wine-price-regression">Wine Price Regression</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end col-md-9 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+
+
+
+      <script>
+      </script>
+  </body>
+</html>
