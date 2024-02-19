@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>kaggle wind speed prediction</title>
+  </head>
+  <body style="background-color:#dee2e6">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">CY's Life</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="battery.html">Battery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="travel.html">Travel</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Class
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="study note.html">Study note</a></li>
+                  <li><a class="dropdown-item" href="leetcode-page-1.html">Leetcode</a></li>
+                  <li><a class="dropdown-item" href="data analysis.html">Data analysis</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <div class="banner">
+        <img src="figure/backgroundpic.jpg" class="w-100">
+    </div>
+
+    <div class="container-fluid mt-3" >
+      <div class="row"> 
+        <div class="col-12 col-md-3" >
+          <div class="col">
+            <div class="card">
+              <img src="figure/selfprofilepic.jpg" class="card-img-top rounded-circle" alt="self picture of CY">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size:25px;font-weight:bold;">CY Wu</h5>
+                  <p class="card-text" style="font-size:18px;">This is me who never ever stop learning.</p>
+                    <div class="row">
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="http://www.linkedin.com/in/samwucy" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-lg-6 text-center">
+                        <a href="https://github.com/chengyenwu" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+            
+        
+            
+        <div class="col-12 col-md-9" >
+          <div class="col">
+            <div class="card">
+              <div class="card-body" >
+                <h2 class="card-title" >kaggle wind speed prediction</h2>
+                <h3 class="card-subtitle mt-3">Introduction</h3>
+                <p class="mt-3" style="font-size:18px;">該數據集包含 6574 個每日平均的氣象監測數值，數據來自氣象站中的 5 個天氣變數感測器。提供了地面每日的平均風速、降水量、最高和最低溫度以及草地最低溫度。而該設備位於離地面21公尺處的空曠區域。最後，數據記錄從1961年1月至1978年12月（17年）。[1]</p>
+                <p class="mt-3" style="font-size:18px;">數據包含9種:<br>1. DATE (YYYY-MM-DD)<br>2. WIND: Average wind speed / knots<br>3. IND: First indicator value<br>4. RAIN: Precipitation Amount / mm<br>5. IND.1: Second indicator value<br>6. T.MAX: Maximum Temperature / °C<br>7. IND.2: Third indicator value<br>8. T.MIN: Minimum Temperature / °C<br>9. T.MIN.G: 09utc Grass Minimum Temperature / °C</p>
+                <img src="figure/dataset-wind speed prediction-cover.png" class="img-fluid" style="display:block;margin:auto;" alt="cover">
+                <h3 class="card-subtitle mt-3 mb-3">Correlation heat map</h3>
+                <h5 class="card-subtitle mt-3 mb-3">Data</h5>
+                <p class="mt-3" style="font-size:18px;">data在kaggle上Wind Speed Prediction Dataset page上取得。</p>
+                <h5 class="card-subtitle mt-3 mb-3">Importing package</h5>
+                <script src="https://gist.github.com/chengyenwu/3267d06e01538cdf2b8a33be395f464a.js"></script>
+                <h5 class="card-subtitle mb-3">Data cleaning & Check data</h5>
+                <script src="https://gist.github.com/chengyenwu/356dd2cdbfe4f287286a5e8000256ac1.js"></script>
+                <pre>
+                    <class 'pandas.core.frame.DataFrame'>
+                        Index: 6574 entries, 1961-01-01 to 1978-12-31
+                        Data columns (total 8 columns):
+                         #   Column   Non-Null Count  Dtype  
+                        ---  ------   --------------  -----  
+                         0   wind     6574 non-null   float64
+                         1   ind      6574 non-null   int64  
+                         2   rain     6574 non-null   float64
+                         3   ind.1    6574 non-null   float64
+                         4   t.max    6574 non-null   float64
+                         5   ind.2    6574 non-null   float64
+                         6   t.min    6574 non-null   float64
+                         7   t.min.g  6574 non-null   float64
+                        dtypes: float64(7), int64(1)
+                        memory usage: 462.2+ KB
+                    </class>
+                </pre>
+                <div class="table-responsive mb">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">wind</th>
+                            <th scope="col">ind</th>
+                            <th scope="col">rain</th>
+                            <th scope="col">ind.1</th>
+                            <th scope="col">t.max</th>
+                            <th scope="col">ind.2</th>
+                            <th scope="col">t.min</th>
+                            <th scope="col">t.min.g</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">date</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1961-01-01</th>
+                            <td>13.67</td>
+                            <td>0</td>
+                            <td>0.2</td>
+                            <td>0.0</td>
+                            <td>9.5</td>
+                            <td>0.0</td>
+                            <td>3.7</td>
+                            <td>-1.0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1961-01-02</th>
+                            <td>11.50</td>
+                            <td>0</td>
+                            <td>5.1</td>
+                            <td>0.0</td>
+                            <td>7.2</td>
+                            <td>0.0</td>
+                            <td>4.2</td>
+                            <td>1.1</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1961-01-03</th>
+                            <td>11.25</td>
+                            <td>0</td>
+                            <td>0.4</td>
+                            <td>0.0</td>
+                            <td>5.5</td>
+                            <td>0.0</td>
+                            <td>0.5</td>
+                            <td>-0.5</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1961-01-04</th>
+                            <td>8.63</td>
+                            <td>0</td>
+                            <td>0.2</td>
+                            <td>0.0</td>
+                            <td>5.6</td>
+                            <td>0.0</td>
+                            <td>0.4</td>
+                            <td>-3.2</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1961-01-05</th>
+                            <td>11.92</td>
+                            <td>0</td>
+                            <td>10.4</td>
+                            <td>0.0</td>
+                            <td>7.2</td>
+                            <td>1.0</td>
+                            <td>-1.5</td>
+                            <td>-7.5</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="card-subtitle mt-3 mb-3">Vistualization: Heat map[2]</h5>
+                <script src="https://gist.github.com/chengyenwu/81309977ad43ae75af3a9239fe2c90e4.js"></script>
+                <img src="figure/heatmap-correlation-wind-speed-prediction.png" class="img-fluid mt-3" style="display:block;margin:auto" alt="heat map-wine">
+                <p class="mt-3" style="font-size:18px;">summary: positive relation between wind and rain; negative relation between wind and Tmax.</p>
+                <h5 class="card-subtitle mt-3 mb-3">Scatter plot of wind, rain, and Tmax adding linear function</h5>
+                <script src="https://gist.github.com/chengyenwu/39790aea22c209730898468d22d0cfa8.js"></script>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img src="figure/scatter-wind-rain with t.max.png" class="card-img-top" alt="scatter-wind-rain with t.max">
+                        <div class="card-body">
+                          <h5 class="card-title">Scatter plot - wind-rain with t.max</h5>
+                          <p class="card-text">vrey small positive correlation between wind speed and rain</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="figure/scatter-wind-t.max.png" class="card-img-top" alt="scatter-wind-t.max">
+                        <div class="card-body">
+                          <h5 class="card-title">Scatter plot - wind-t.max</h5>
+                          <p class="card-text">negative correlation between wind speed and Tmax, and we'll try to get the linear function.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <p class="mt-3" style="font-size:18px;">summary: trying to get linear function between wind speed and t.max.</p>
+                <img src="figure/scatter-wind-t.max adding linear function.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto; width: 70%; height: 70%" alt="scatter plot with linear function">
+                <p class="mt-3" style="font-size:18px;">Learned function: wind-speed = Tmax * -0.25 + 12.97. <br>R^2 score: 0.06024145161228922.</p>
+                <h5 class="card-subtitle mt-3 mb-3">Pair plots for all parameters[3]</h5>
+                <script src="https://gist.github.com/chengyenwu/cd9e8cd6b2ef46c491274a653521265f.js"></script>
+                <img src="figure/wind-speed-all parameter pair plot.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto" alt="pair plots">
+                <p class="mt-3" style="font-size:18px;">summary: most parameters don't have correlation (especially at the wind speed row), so it's hard to find model to predict wind speed.</p>
+                
+                <h5 class="card-subtitle mt-3 mb-3">searching the samllest mean squared error (msr) and absolute error (mar) model[3]</h5>
+                <script src="https://gist.github.com/chengyenwu/e69edc8cb7305146aeea76f87c62ba97.js"></script>
+                <pre>
+                    LinearRegression<br>
+                    mean squared error: 22.05396295252656<br>
+                    mean absolute error: 3.748737638719434<br>
+                    
+                    Lasso<br>
+                    mean squared error: 25.020399659795157<br>
+                    mean absolute error: 4.021720674389802<br>
+                    
+                    Ridge<br>
+                    mean squared error: 22.05417347787967<br>
+                    mean absolute error: 3.7487905093006786<br>
+                    
+                    BayesianRidge<br>
+                    mean squared error: 22.05976546092399<br>
+                    mean absolute error: 3.750122429103166<br>
+                    
+                    DecisionTreeRegressor<br>
+                    mean squared error: 41.40043724949303<br>
+                    mean absolute error: 5.037650063371356<br>
+                    
+                    LinearSVR<br>
+                    mean squared error: 22.223617774558146<br>
+                    mean absolute error: 3.708201011556171<br>
+                    
+                    KNeighborsRegressor<br>
+                    mean squared error: 24.108564474524712<br>
+                    mean absolute error: 3.865565019011407<br>
+
+                    RandomForestRegressor<br>
+                    mean squared error: 22.468313202761145<br>
+                    mean absolute error: 3.679676887431959<br>
+                </pre>
+                <script src="https://gist.github.com/chengyenwu/5c97be97ce06d70815063116a3c5cd9e.js"></script>
+                <img src="figure/wind-speed-prediction-msr and mar figure.png" class="img-fluid mt-3 mb-3" style="display:block;margin:auto" alt="msr and mar">
+                <h5 class="card-subtitle mt-3 mb-3">Conclusion</h5>
+                <p class="mt-3" style="font-size:18px;">RandomForestRegressor和LinearSVR兩模型有較小的mean squared error loss和mean absolute error loss，說明使用兩模型來預測wind speed較為準確。</p>
+                <h3 class="mt-3" style="font-size:18px;">Source</h3>
+                [1] <a href="https://www.kaggle.com/datasets/fedesoriano/wind-speed-prediction-dataset/data">Wind Speed Prediction Dataset</a><br>
+                [2] <a href="https://www.kaggle.com/code/hishaamarmghan/wind-speed-prediction-model">Wind Speed Prediction Model</a><br>
+                [3] <a href="https://www.kaggle.com/code/gauranggupta123/wind-speed-prediction-using-different-models">Wind speed prediction using different models</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end col-md-9 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+
+
+
+      <script>
+      </script>
+  </body>
+</html>
